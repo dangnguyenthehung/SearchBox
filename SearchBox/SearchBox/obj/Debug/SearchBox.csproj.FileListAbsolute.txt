@@ -1,0 +1,15 @@
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\SearchBox.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\SearchBox.pdb
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Core.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Platform.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Core.pdb
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Core.xml
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\obj\Debug\SearchBox.csprojResolveAssemblyReference.cache
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\obj\Debug\SearchBox.MainPage.xaml.g.cs
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\obj\Debug\SearchBox.App.xaml.g.cs
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\obj\Debug\SearchBox.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox\obj\Debug\SearchBox.pdb
