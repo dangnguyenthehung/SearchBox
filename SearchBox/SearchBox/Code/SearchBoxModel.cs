@@ -34,7 +34,7 @@ namespace SearchBox.Code
         {
             ResultObj data = new ResultObj();
 
-            string url = "http://192.168.1.48:8801/api/person/" + Result_ID;
+            string url = "http://dangnguyenthehung.somee.com/rest/api/person/" + Result_ID;
 
             data = await getRESTAsync(url);//.ConfigureAwait(continueOnCapturedContext: false);
             return data;

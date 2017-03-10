@@ -400,3 +400,5 @@ D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox.UWP\obj\ARM\Debug\qualifier
 D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox.UWP\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox.UWP\obj\ARM\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox.UWP\obj\ARM\Debug\ProjectArchitectures.txt
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox.UWP\bin\ARM\Debug\Newtonsoft.Json.dll
+D:\Project\Xamarin\SearchBox\SearchBox\SearchBox.UWP\bin\ARM\Debug\Newtonsoft.Json.xml
