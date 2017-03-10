@@ -15,11 +15,13 @@ namespace SearchBox
         SearchBar searchBar;
         StackLayout resultPart;
         // test
-        Label lb_name;
-        Label lb_type;
+        Label lb_id;
+        Label lb_firstName;
+        Label lb_lastName;
         Label lb_district;
         Label lb_city;
         Label lb_content;
+
         //
 
         public App()
@@ -34,34 +36,40 @@ namespace SearchBox
                 FontSize = 25
             };
             // create label
-            lb_name = new Label
+            lb_id = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
-                Text = "Name",
+                Text = "",
                 FontSize = 20
             };
-            lb_type = new Label
+            lb_firstName = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
-                Text = "Type",
+                Text = "",
+                FontSize = 20
+            };
+            lb_lastName = new Label
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                Text = "",
                 FontSize = 20
             };
             lb_district = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
-                Text = "District",
+                Text = "",
                 FontSize = 20
             };
             lb_city = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
-                Text = "City",
+                Text = "",
                 FontSize = 20
             };
             lb_content = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
-                Text = "Content",
+                Text = "",
                 FontSize = 20
             };
             //
@@ -76,19 +84,23 @@ namespace SearchBox
             searchBar = new SearchBar
             {
                 Placeholder = "Enter keyword: ",
-                SearchCommand = new Command(() =>
+                SearchCommand = new Command(async () =>
                 {
                     //resultLabel.Text = "Result: " + searchBar.Text + " is what you want.";
-                    SearchBoxModel model = new SearchBoxModel();
-                    lb_name.Text = model.result.Name;
-                    lb_type.Text = model.result.Type;
-                    lb_district.Text = "Quận " + model.result.District.ToString();
-                    lb_city.Text = model.result.City;
+                    string user_input = searchBar.Text;
+                    SearchBoxModel model = new SearchBoxModel(user_input);
+                    model.result = await model.getData();
+                    lb_id.Text = "ID: " + model.result.ID.ToString();
+                    lb_firstName.Text = "First name: " + model.result.FirstName;
+                    lb_lastName.Text = "Last name:  " + model.result.LastName;
+                    lb_district.Text = "District: " + model.result.District;
+                    lb_city.Text = "City: " + model.result.City;
                     lb_content.Text = "* Search content: " + searchBar.Text + " *";
 
                     // add label to resultPart
-                    resultPart.Children.Add(lb_name);
-                    resultPart.Children.Add(lb_type);
+                    resultPart.Children.Add(lb_id);
+                    resultPart.Children.Add(lb_firstName);
+                    resultPart.Children.Add(lb_lastName);
                     resultPart.Children.Add(lb_district);
                     resultPart.Children.Add(lb_city);
                     resultPart.Children.Add(lb_content);

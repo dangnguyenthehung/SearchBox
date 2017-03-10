@@ -1,0 +1,2 @@
+D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox.UWP\SearchBox.UWP.csproj;x86
+D:\Project\XamarinTest\SearchBox\SearchBox\SearchBox\SearchBox.csproj;neutral
