@@ -15,9 +15,10 @@ namespace SearchBox
         SearchBar searchBar;
         StackLayout resultPart;
         // test
-        Label lb_user;
-        Label lb_postdate;
-        Label lb_message;
+        //Label lb_title;
+        //Label lb_description;
+        //Label lb_district;
+        //Label lb_image;
         //Label lb_district;
         //Label lb_city;
         //Label lb_content;
@@ -36,25 +37,25 @@ namespace SearchBox
                 FontSize = 25
             };
             // create label
-            lb_user = new Label
-            {
-                HorizontalTextAlignment = TextAlignment.Center,
-                Text = "",
-                FontSize = 20
-            };
-            lb_postdate = new Label
-            {
-                HorizontalTextAlignment = TextAlignment.Center,
-                Text = "",
-                FontSize = 20
-            };
-            lb_message = new Label
-            {
-                HorizontalTextAlignment = TextAlignment.Center,
-                Text = "",
-                FontSize = 20
-            };
+            //lb_title = new Label
+            //{
+            //    HorizontalTextAlignment = TextAlignment.Center,
+            //    Text = "",
+            //    FontSize = 20
+            //};
+            //lb_description = new Label
+            //{
+            //    HorizontalTextAlignment = TextAlignment.Center,
+            //    Text = "",
+            //    FontSize = 20
+            //};
             //lb_district = new Label
+            //{
+            //    HorizontalTextAlignment = TextAlignment.Center,
+            //    Text = "",
+            //    FontSize = 20
+            //};
+            //lb_image = new Label
             //{
             //    HorizontalTextAlignment = TextAlignment.Center,
             //    Text = "",
@@ -90,17 +91,60 @@ namespace SearchBox
                     string user_input = searchBar.Text;
                     SearchBoxModel model = new SearchBoxModel(user_input);
                     model.result = await model.getData();
-                    lb_user.Text = "user: " + model.result.user;
-                    lb_postdate.Text = "Post date: " + model.result.post_date;
-                    lb_message.Text = "Message:  " + model.result.message;
-                    //lb_district.Text = "District: " + model.result.District;
-                    //lb_city.Text = "City: " + model.result.City;
-                    //lb_content.Text = "* Search content: " + searchBar.Text + " *";
+
+                    resultLabel.Text = "Total matchs: ("+ model.result.Count() + ")";
+                    resultPart.Children.Clear();
+                    foreach (var item in model.result)
+                    {
+                        string title = "title: " + item.title;
+                        string description = "description: " + item.description;
+                        string district = "district: " + item.district;
+                        string image = "image: " + item.image;
+
+                        Label lb_result_title = new Label
+                        {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = title,
+                            FontSize = 16
+                        };
+                        Label lb_result_description = new Label
+                        {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = description,
+                            FontSize = 14
+                        };
+                        Label lb_result_district = new Label
+                        {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = district,
+                            FontSize = 14
+                        };
+                        Label lb_result_image = new Label
+                        {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = image,
+                            FontSize = 14
+                        };
+
+                        resultPart.Children.Add(lb_result_title);
+                        resultPart.Children.Add(lb_result_district);
+                        resultPart.Children.Add(lb_result_description);
+                        resultPart.Children.Add(lb_result_image);
+
+                    }
+
+                    //lb_user.Text = "user: " + model.result.user;
+                    //lb_postdate.Text = "Post date: " + model.result.post_date;
+                    //lb_message.Text = "Message:  " + model.result.message;
+
+                    
 
                     // add label to resultPart
-                    resultPart.Children.Add(lb_user);
-                    resultPart.Children.Add(lb_postdate);
-                    resultPart.Children.Add(lb_message);
+
+                    //resultPart.Children.Add(lb_user);
+                    //resultPart.Children.Add(lb_postdate);
+                    //resultPart.Children.Add(lb_message);
+
                     //resultPart.Children.Add(lb_district);
                     //resultPart.Children.Add(lb_city);
                     //resultPart.Children.Add(lb_content);

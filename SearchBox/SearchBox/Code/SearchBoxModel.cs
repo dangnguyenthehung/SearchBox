@@ -16,7 +16,7 @@ namespace SearchBox.Code
     public class SearchBoxModel
     {
         //public ResultObj result = new ResultObj();
-        public Result_elastic result = new Result_elastic();
+        public List<Result_elastic> result = new List<Result_elastic>();
         private int Result_ID = 1;
         private string searchStr = "";
 
@@ -68,20 +68,20 @@ namespace SearchBox.Code
         //}
 
         // method - api elastic
-        public async Task<Result_elastic> getData()
+        public async Task<List<Result_elastic>> getData()
         {
-            Result_elastic data = new Result_elastic();
+            List<Result_elastic> data = new List<Result_elastic>();
 
-            string url = "http://dangnguyenthehung.somee.com/elasticTest/api/elasticDemo/?name=" + searchStr;
+            string url = "http://dangnguyenthehung.somee.com/elasticTest/api/elasticDemo/?title=" + searchStr;
 
             data = await getRESTAsync(url);//.ConfigureAwait(continueOnCapturedContext: false);
             return data;
         }
 
-        public async Task<Result_elastic> getRESTAsync(string url)
+        public async Task<List<Result_elastic>> getRESTAsync(string url)
         {
             HttpClient client = new HttpClient();
-            Result_elastic Items = new Result_elastic();
+            List<Result_elastic> Items = new List<Result_elastic>();
 
             Uri uri = new Uri(url);
 
@@ -91,7 +91,7 @@ namespace SearchBox.Code
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    Items = JsonConvert.DeserializeObject<Result_elastic>(content);
+                    Items = JsonConvert.DeserializeObject<List<Result_elastic>>(content);
                 }
             }
             catch (Exception ex)

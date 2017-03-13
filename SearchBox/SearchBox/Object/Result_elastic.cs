@@ -8,8 +8,9 @@ namespace SearchBox.Object
 {
     public class Result_elastic
     {
-        public string user { get; set; }
-        public string post_date { get; set; }
-        public string message { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public string district { get; set; }
+        public string image { get; set; }
     }
 }

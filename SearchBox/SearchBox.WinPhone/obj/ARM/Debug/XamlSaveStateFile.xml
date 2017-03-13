@@ -1,6 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <ReferenceAssembly PathName="d:\project\xamarintest\searchbox\searchbox\searchbox\bin\debug\searchbox.dll" HashGuid="b8ba1d3e-5434-0bd4-4ca3-0a3f7ddff691" />
+    <LocalAssembly PathName="d:\project\xamarintest\searchbox\searchbox\searchbox.winphone\obj\arm\debug\intermediatexaml\searchbox.winphone.exe" HashGuid="773dc1ce-e269-6af0-77c0-9298acc9a4c2" />
+    <ReferenceAssembly PathName="d:\project\xamarintest\searchbox\searchbox\searchbox\bin\debug\searchbox.dll" HashGuid="5b110afb-2524-0499-dcd7-e61d9cc6f0e2" />
     <ReferenceAssembly PathName="d:\project\xamarintest\searchbox\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
     <ReferenceAssembly PathName="d:\project\xamarintest\searchbox\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
     <ReferenceAssembly PathName="d:\project\xamarintest\searchbox\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />
